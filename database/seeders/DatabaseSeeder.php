@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use DB;
 use Illuminate\Database\Seeder;
 
 
@@ -14,7 +15,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
-        $this->call(PostsTableSeeder::class);
+        // memanggil data yang akan dikirim
+        $this->call(PostsSeeder::class);
+        $this->call(DosenSeeder::class);
+        $this->call(MhsSeeder::class);
+        $this->command->info("Sample Data sudah terisi");
     }
 }
