@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\MyController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -153,6 +155,10 @@ Route::get('/mhs', function () {
     return view('mhs', compact('huhu'));
 });
 
+Route::get('test-controller', [MyController::class,'test']);
+Route::get('hero', [MyController::class, 'heroes']);
+
+Route::get('barang', [MyController::class, 'barangs']);
 
 
 
