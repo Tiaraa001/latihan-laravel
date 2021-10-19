@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use DB;
 use Illuminate\Database\Seeder;
 
 class PesananSeeder extends Seeder
@@ -13,13 +14,20 @@ class PesananSeeder extends Seeder
      */
     public function run()
     {
-        $pesan = [
+        $pesanan = [
+            ['nama_pelanggan' => "Tiara", 'nama_barang' => 'sabun',
+             'qty' => 11, 'tgl_pesan' => "2021-09-08"],
 
-            ['namaPelanggan'=> 'Tiara', 'namaBarang'=> 'Sabun', 'qty'=>100, 'tglPesan'=>'2021-10-08'],
-            ['namaPelanggan'=> 'Alka', 'namaBarang'=> 'Odol', 'qty'=>100, 'tglPesan'=>'2021-10-08'],
-            ['namaPelanggan'=> 'Tami', 'namaBarang'=> 'Sampo', 'qty'=>100, 'tglPesan'=>'2021-10-08'],
-            ['namaPelanggan'=> 'Hafsya', 'namaBarang'=> 'Ciki', 'qty'=>100, 'tglPesan'=>'2021-10-08'],
-            ['namaPelanggan'=> 'Irma', 'namaBarang'=> 'Wafer', 'qty'=>100, 'tglPesan'=>'2021-10-08'],
+            ['nama_pelanggan' => "alka", 'nama_barang' => "Botol",
+            'qty' => 20 , 'tgl_pesan' => "2021-07-16"],
+            ['nama_pelanggan' => "thami", 'nama_barang' => "Sabun",
+            'qty' => 50, 'tgl_pesan' => "2021-05-26"],
+            ['nama_pelanggan' => "hafsya", 'nama_barang' => "Peralatan",
+             'qty' => 15 ,'tgl_pesan' => "2021-10-09"],
+            ['nama_pelanggan' => "nesya", 'nama_barang' => "Peralatan",
+            'qty' => 15, 'tgl_pesan' => "2021-09-25"],
         ];
+
+        DB::table('pesanans')->insert($pesanan);
     }
 }

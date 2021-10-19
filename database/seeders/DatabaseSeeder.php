@@ -15,12 +15,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // memanggil data yang akan dikirim
-        // $this->call(PostsSeeder::class);
-        // $this->call(DosenSeeder::class);
-        // $this->call(MhsSeeder::class);
-        // $this->command->info("Sample Data sudah terisi");
-        // $this->call(HeroSeeder::class);
-        $this->call(BarangSeeder::class);
+        $this->call(PostsSeeder::class);
+        $this->call(DosenSeeder::class);
+        $this->call(MhsSeeder::class);
+        $this->command->info("Sample Data sudah terisi");
+        $this->call(HeroSeeder::class);
+       $this->call(BarangSeeder::class);
+       $this->call(PesananSeeder::class);
+        $this->call(PembelianSeeder::class);
+        $this->call(PembeliSeeder::class);
+        $this->call(SuplierSeeder::class);
     }
 }

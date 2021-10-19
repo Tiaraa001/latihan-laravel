@@ -159,7 +159,9 @@ Route::get('test-controller', [MyController::class,'test']);
 Route::get('hero', [MyController::class, 'heroes']);
 
 Route::get('barang', [MyController::class, 'barangs']);
-
-
+Route::get('pesanan', [Mycontroller::class, 'pesanans']);
+Route::get('pembeli', [Mycontroller::class, 'pembelis']);
+Route::get('pembelian', [Mycontroller::class, 'pembelians']);
+Route::get('suplier', [Mycontroller::class, 'supliers']);
 
 
